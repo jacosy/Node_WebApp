@@ -1,9 +1,14 @@
 const express = require('express');
+const morgan = require('morgan');
+const path = require('path');
 
 const app = express();
 
+app.use(morgan('tiny'));
+
 app.get('/', (req, res) => {
-  res.send(`Hello World!`);
+  console.log(path.join(__dirname, '/views/index.html'));
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 app.listen(3000, () => {
