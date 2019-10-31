@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link href="css/bootstrap.min.css" rel="stylesheet">      
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">This is Default.ejs page</div>
+      <h1>Title: <%=title%></h1>      
+      <ul>
+          <%for(let c of content) {%>
+            <li>Name: <%=c.name%>, Value: <%=c.value%></li>
+          <%}%>
+      </ul>      
+    </div>
+
+    <script src="js/jquery.min.js" />
+    <script src="js/bootstrap.min.js" />
+  </body>
+</html>
